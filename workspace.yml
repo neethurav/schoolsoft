@@ -1,0 +1,18 @@
+opencollection: 1.0.0
+info:
+  name: "My Workspace"
+  type: workspace
+
+collections:
+  - name: "Sample API Collection"
+    path: "C:/Users/HP/Documents/bruno/Sample API Collection"
+  - name: "Ceramo"
+    path: "C:/Users/HP/Documents/bruno/Ceramo"
+  - name: "School Software"
+    path: "C:/Users/HP/Documents/bruno/School Software"
+  - name: "Schoolsoft"
+    path: "C:/Users/HP/Documents/bruno/Schoolsoft"
+
+specs:
+
+docs: ''
