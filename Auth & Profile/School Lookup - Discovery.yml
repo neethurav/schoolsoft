@@ -13,10 +13,11 @@ http:
       value: application/json
   body:
     type: json
-    data: |-
+    data: |+
       {
         "school_code": "MYSCHOOL"
       }
+
   auth: inherit
 
 settings:
