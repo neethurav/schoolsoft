@@ -1,0 +1,38 @@
+info:
+  name: Dashboard
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://neethu.astradevelops.in/school/public/api/dashboard
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 2|QAUCNTTK98hzbIQhONPS2GiAyeHba0l5OOPxDkLHe4fd7387
+  body:
+    type: json
+    data: |-
+      // ==========================================
+      // 6. DASHBOARDS
+      // ==========================================
+
+      // 6.1 STUDENT DASHBOARD
+      // GET {{base_url}}/dashboard
+
+      // 6.2 PARENT DASHBOARD (With optional child switcher)
+      // GET {{base_url}}/dashboard
+      // GET {{base_url}}/dashboard/2           // Explicitly view dashboard for child 2
+
+      // 6.3 TEACHER DASHBOARD
+      // GET {{base_url}}/dashboard
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

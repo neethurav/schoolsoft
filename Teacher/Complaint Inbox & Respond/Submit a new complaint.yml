@@ -1,0 +1,30 @@
+info:
+  name: "Submit a new complaint "
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://neethu.astradevelops.in/school/public/api/teacher/complaints
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 3|lg7GfNX5hnCfPE5sUCozBymaiAd9BvyZA2au7vtl94a1502b
+  body:
+    type: json
+    data: |-
+      {
+        "category": "facilities",
+        "subject": "Projector not working in Room 102",
+        "description": "The HDMI port is damaged and turns off repeatedly."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

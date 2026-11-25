@@ -1,0 +1,40 @@
+info:
+  name: Timetable
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: https://neethu.astradevelops.in/school/public/api/timetable
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  body:
+    type: json
+    data: |+
+      
+      // ==========================================
+      // 4. TIMETABLE
+      // ==========================================
+
+      // 4.1 DEFAULT (Logged-in Student or Default Child)
+      // GET {{base_url}}/timetable
+
+      // 4.2 SPECIFIC DAY FILTER (e.g. Monday, Tuesday, etc.)
+      // GET {{base_url}}/timetable?day=Monday
+
+      // 4.3 PARENT SIBLING SWITCHING (Switching to child e.g. Student ID 2)
+      // GET {{base_url}}/timetable/2
+      // GET {{base_url}}/timetable/2?day=Monday
+
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

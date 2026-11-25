@@ -1,0 +1,27 @@
+info:
+  name: School Lookup / Discovery
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://neethu.astradevelops.in/school/public/api/school-lookup
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "school_code": "MYSCHOOL"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

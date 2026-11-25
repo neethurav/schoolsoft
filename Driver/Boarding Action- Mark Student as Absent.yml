@@ -1,0 +1,25 @@
+info:
+  name: "Boarding Action: Mark Student as Absent"
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: https://neethu.astradevelops.in/school/public/api/driver/transport/students/1/absent
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 2|QAUCNTTK98hzbIQhONPS2GiAyeHba0l5OOPxDkLHe4fd7387
+  body:
+    type: json
+    data: "// URL: {{base_url}}/fees (or {{base_url}}/fees/{student_id})"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,34 @@
+info:
+  name: Exam Timetable
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: https://neethu.astradevelops.in/school/public/api/exams/1
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  body:
+    type: json
+    data: |+
+      // ==========================================
+      // 5. EXAMS & RESULTS
+      // ==========================================
+
+      // 5.1 EXAM SCHEDULE / TIMETABLE
+      // GET {{base_url}}/exams
+      // GET {{base_url}}/exams/2               // For specific child
+
+
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

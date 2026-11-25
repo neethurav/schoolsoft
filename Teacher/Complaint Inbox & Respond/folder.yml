@@ -1,0 +1,7 @@
+info:
+  name: Complaint Inbox & Respond
+  type: folder
+  seq: 7
+
+request:
+  auth: inherit

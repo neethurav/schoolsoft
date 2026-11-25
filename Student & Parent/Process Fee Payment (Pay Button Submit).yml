@@ -1,0 +1,31 @@
+info:
+  name: Process Fee Payment (Pay Button Submit)
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: https://neethu.astradevelops.in/school/public/api/fees/pay
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  body:
+    type: json
+    data: |-
+      {
+        "student_id": "1",
+        "installment_ids": [1],
+        "amount": "18000",
+        "payment_method": "UPI"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

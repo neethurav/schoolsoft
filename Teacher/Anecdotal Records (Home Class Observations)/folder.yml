@@ -1,0 +1,7 @@
+info:
+  name: Anecdotal Records (Home Class Observations)
+  type: folder
+  seq: 5
+
+request:
+  auth: inherit

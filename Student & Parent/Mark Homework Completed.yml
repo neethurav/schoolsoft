@@ -1,0 +1,28 @@
+info:
+  name: Mark Homework Completed
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: https://neethu.astradevelops.in/school/public/api/homework/1/complete
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  body:
+    type: json
+    data: |-
+      {
+        "remarks": "Completed all 10 problems on notebook page 45"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,42 @@
+info:
+  name: Exam Results & Report Card
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: https://neethu.astradevelops.in/school/public/api/results?term_id=1
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  params:
+    - name: term_id
+      value: "1"
+      type: query
+  body:
+    type: json
+    data: |+
+      // ==========================================
+      // 5. RESULTS & PROGRESS CARD (Term-based)
+      // ==========================================
+
+      // 5.1 DEFAULT RESULTS (Defaults to Term 1 for logged-in Student or default Child)
+      // GET {{base_url}}/results
+
+      // 5.2 SWITCHING TERM (When user taps "Term 2" or "Term 3" tab)
+      // GET {{base_url}}/results?term_id=2
+
+      // 5.3 PARENT SIBLING SWITCHING (Child 2)
+      // GET {{base_url}}/results/2
+      // GET {{base_url}}/results/2?term_id=2
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

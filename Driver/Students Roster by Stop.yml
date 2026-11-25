@@ -1,0 +1,25 @@
+info:
+  name: Students Roster by Stop
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://neethu.astradevelops.in/school/public/api/driver/transport/students
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 2|QAUCNTTK98hzbIQhONPS2GiAyeHba0l5OOPxDkLHe4fd7387
+  body:
+    type: json
+    data: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

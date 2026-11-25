@@ -1,0 +1,38 @@
+info:
+  name: Marks Entry Roster & Term Tabs
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://neethu.astradevelops.in/school/public/api/teacher/results/entry?exam_id=1&class_id=1&section_id=1&subject_id=1
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 3|lg7GfNX5hnCfPE5sUCozBymaiAd9BvyZA2au7vtl94a1502b
+  params:
+    - name: exam_id
+      value: "1"
+      type: query
+    - name: class_id
+      value: "1"
+      type: query
+    - name: section_id
+      value: "1"
+      type: query
+    - name: subject_id
+      value: "1"
+      type: query
+  body:
+    type: json
+    data: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

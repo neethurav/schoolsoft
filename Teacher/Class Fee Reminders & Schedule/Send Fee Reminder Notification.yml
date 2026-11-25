@@ -1,0 +1,28 @@
+info:
+  name: Send Fee Reminder Notification
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://neethu.astradevelops.in/school/public/api/teacher/fees/remind
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 3|lg7GfNX5hnCfPE5sUCozBymaiAd9BvyZA2au7vtl94a1502b
+  body:
+    type: json
+    data: |-
+      {
+        "student_id": "1" // Or omit to send to all pending students
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,31 @@
+info:
+  name: Publish Results
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://neethu.astradevelops.in/school/public/api/teacher/results/publish
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 3|lg7GfNX5hnCfPE5sUCozBymaiAd9BvyZA2au7vtl94a1502b
+  body:
+    type: json
+    data: |-
+      {
+        "class_id": "1",
+        "section_id": "1",
+        "subject_id": "1",
+        "term_id": "1"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

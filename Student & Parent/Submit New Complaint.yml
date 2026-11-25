@@ -1,0 +1,32 @@
+info:
+  name: Submit New Complaint
+  type: http
+  seq: 17
+
+http:
+  method: POST
+  url: https://neethu.astradevelops.in/school/public/api/complaint
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  body:
+    type: json
+    data: |-
+      {
+        // "student_id": "1", // Required for Parent role, optional for Student
+        "category": "transport", // teacher_class | bullying_safety | transport | fees | facilities | other
+        "teacher_id": "1",       // Teacher ID selected from form_meta dropdown
+        "subject": "Bus arriving late",
+        "description": "Route 4 bus has been 15 minutes late for the past week."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

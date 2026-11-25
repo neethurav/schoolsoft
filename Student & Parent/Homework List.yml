@@ -1,0 +1,42 @@
+info:
+  name: Homework List
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: https://neethu.astradevelops.in/school/public/api/homework/1
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  body:
+    type: json
+    data: |+
+      // ==========================================
+      // 2. HOMEWORK
+      // ==========================================
+
+      // 2.1 DEFAULT (Current Month for Logged-in Student or Default Child)
+      // GET {{base_url}}/homework
+
+      // 2.2 SPECIFIC MONTH & YEAR (When user changes month in app)
+      // GET {{base_url}}/homework?month=10&year=2026
+
+      // 2.3 PARENT SIBLING SWITCHING (Switching to child e.g. Student ID 2)
+      // GET {{base_url}}/homework/2
+
+      // 2.4 PARENT SIBLING SWITCHING WITH MONTH FILTER
+      // GET {{base_url}}/homework/2?month=10&year=2026
+
+
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

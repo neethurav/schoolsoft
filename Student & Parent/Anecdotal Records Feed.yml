@@ -1,0 +1,32 @@
+info:
+  name: Anecdotal Records Feed
+  type: http
+  seq: 14
+
+http:
+  method: GET
+  url: https://neethu.astradevelops.in/school/public/api/anecdotal/1?page=1&per_page=10
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: per_page
+      value: "10"
+      type: query
+  body:
+    type: json
+    data: "// URL: {{base_url}}/anecdotal (or {{base_url}}/anecdotal/{student_id})"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

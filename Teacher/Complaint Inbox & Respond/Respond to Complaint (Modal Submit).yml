@@ -1,0 +1,29 @@
+info:
+  name: Respond to Complaint (Modal Submit)
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: https://neethu.astradevelops.in/school/public/api/teacher/complaints/1
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 3|lg7GfNX5hnCfPE5sUCozBymaiAd9BvyZA2au7vtl94a1502b
+  body:
+    type: json
+    data: |-
+      {
+        "status": "resolved", // "in_progress" or "resolved"
+        "response": "Driver was spoken to and arrival time has been rectified."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

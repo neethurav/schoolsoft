@@ -1,0 +1,31 @@
+info:
+  name: Add New Anecdotal Record
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://neethu.astradevelops.in/school/public/api/teacher/anecdotal
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 3|lg7GfNX5hnCfPE5sUCozBymaiAd9BvyZA2au7vtl94a1502b
+  body:
+    type: json
+    data: |-
+      {
+        "student_id": "1",
+        "type": "positive",      // "positive", "concern", or "academic"
+        "note": "Showing great leadership skills in group projects.",
+        "record_date": "2025-10-15" // Optional (defaults to today's date if omitted)
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

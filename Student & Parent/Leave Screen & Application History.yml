@@ -1,0 +1,50 @@
+info:
+  name: Leave Screen & Application History
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: https://neethu.astradevelops.in/school/public/api/leave?month=10&year=2026
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  params:
+    - name: month
+      value: "10"
+      type: query
+    - name: year
+      value: "2026"
+      type: query
+  body:
+    type: json
+    data: |+
+      
+      // ==========================================
+      // 3. LEAVE
+      // ==========================================
+
+      // 3.1 DEFAULT (Current Month History for Logged-in Student or Default Child)
+      // GET {{base_url}}/leave
+
+      // 3.2 SPECIFIC MONTH & YEAR (When user changes month in app)
+      // GET {{base_url}}/leave?month=10&year=2026
+
+      // 3.3 PARENT SIBLING SWITCHING (Switching to child e.g. Student ID 2)
+      // GET {{base_url}}/leave/2
+
+      // 3.4 PARENT SIBLING SWITCHING WITH MONTH FILTER
+      // GET {{base_url}}/leave/2?month=10&year=2026
+
+
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

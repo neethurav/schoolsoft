@@ -1,0 +1,50 @@
+info:
+  name: "Vertify OTP "
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://neethu.astradevelops.in/school/public/api/password/verify-otp
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      // //STUDENT
+      // {
+      //   "role": "1",
+      //   "identifier": "ADM20260001", // admission no, phone or email
+      //   "otp": "123456"              // 6-digit OTP
+      // }
+
+      //PARENT
+      {
+        "role": "5",
+        "identifier": "raveendran.neethu75@gmail.com", // phone or email
+        "otp": "615566"                                // 6-digit OTP
+      }
+
+      // //TEACHER
+      // {
+      //   "role": "2",
+      //   "identifier": "TCH001", // teacher code, phone or email
+      //   "otp": "123456"         // 6-digit OTP
+      // }
+
+      // //DRIVER
+      // {
+      //   "role": "4",
+      //   "identifier": "9876543220", // phone number
+      //   "otp": "123456"             // 6-digit OTP
+      // }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

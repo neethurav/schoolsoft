@@ -1,0 +1,25 @@
+info:
+  name: Delete Complaint
+  type: http
+  seq: 18
+
+http:
+  method: POST
+  url: https://neethu.astradevelops.in/school/public/api/complaint/3/delete
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  body:
+    type: json
+    data: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

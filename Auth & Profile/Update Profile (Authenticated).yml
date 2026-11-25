@@ -1,0 +1,61 @@
+info:
+  name: Update Profile (Authenticated)
+  type: http
+  seq: 7
+
+http:
+  method: PUT
+  url: https://neethu.astradevelops.in/school/public/api/profile/update
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Accept
+      value: application/json
+    - name: Authorization
+      value: "Bearer "
+  body:
+    type: json
+    data: |-
+      {
+        // ==========================================
+        // 1. COMMON FIELDS (Applicable to All Roles)
+        // ==========================================
+        "name": "Ronald Smith",                  // Full display name (Max 100 chars)
+        "email": "ronald.smith@school.edu",      // Valid email, must be unique across users
+        "phone": "9876543210",                   // 10 to 13 digits mobile number (e.g. 9876543210)
+        "address": "123 Knowledge Park, City",   // Residential address (Max 500 chars)
+
+        // ==========================================
+        // 2. STUDENT FIELDS (Logged in as Student - Role 1)
+        // ==========================================
+        "dob": "2008-05-15",                     // Date of birth in YYYY-MM-DD format
+        "blood_group": "O+",                     // Blood group (e.g. A+, B+, O+, AB+, O-)
+        "parent_phone": "9876543211",            // Parent / Guardian emergency phone (10-13 digits)
+        "photo": "data:image/jpeg;base64,/9j/4AAQSkZJRg...", // [OPTIONAL] Base64 image string (saves to student_academic_years)
+
+        // ==========================================
+        // 3. TEACHER FIELDS (Logged in as Teacher - Role 2)
+        // ==========================================
+        "qualification": "M.Sc Mathematics, B.Ed", // Highest educational qualification (Max 100 chars)
+        "photo": "data:image/jpeg;base64,/9j/4AAQSkZJRg...", // [OPTIONAL] Base64 image string (saves to teacher_academic_years)
+
+        // ==========================================
+        // 4. PARENT FIELDS (Logged in as Parent - Role 5)
+        // ==========================================
+        "occupation": "Senior Software Architect", // Parent's profession/occupation (Max 100 chars)
+        // (Note: No photo field for Parent - DB has no photo column)
+
+        // ==========================================
+        // 5. DRIVER FIELDS (Logged in as Driver - Role 4)
+        // ==========================================
+        "license_number": "KL-11-20150001234"    // Driver's driving license number (Max 100 chars)
+        // (Note: No photo field for Driver - DB has no photo column)
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,7 @@
+info:
+  name: Student Leave Requests & Approvals
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

@@ -1,0 +1,28 @@
+info:
+  name: Attendance Day Detail
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: https://neethu.astradevelops.in/school/public/api/attendance/day/2025-10-04/1
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  body:
+    type: json
+    data: |-
+      /// ATTENDANCE DAY DETAIL (Bottom sheet when tapping a specific date)
+      // GET {{base_url}}/attendance/day/2026-11-20
+      // GET {{base_url}}/attendance/day/2026-11-20?student_id=2
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

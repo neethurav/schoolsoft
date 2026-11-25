@@ -1,0 +1,25 @@
+info:
+  name: Complete Trip
+  type: http
+  seq: 7
+
+http:
+  method: PUT
+  url: https://neethu.astradevelops.in/school/public/api/driver/transport/trip/complete
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 2|QAUCNTTK98hzbIQhONPS2GiAyeHba0l5OOPxDkLHe4fd7387
+  body:
+    type: json
+    data: "// URL: {{base_url}}/transport (or {{base_url}}/transport/{student_id})"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,0 +1,7 @@
+info:
+  name: Study Materials (Subject Notes & Uploads)
+  type: folder
+  seq: 6
+
+request:
+  auth: inherit

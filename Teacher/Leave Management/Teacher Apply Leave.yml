@@ -1,0 +1,31 @@
+info:
+  name: Teacher Apply Leave
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://neethu.astradevelops.in/school/public/api/teacher/leave/apply
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 3|lg7GfNX5hnCfPE5sUCozBymaiAd9BvyZA2au7vtl94a1502b
+  body:
+    type: json
+    data: |-
+      {
+        "leave_type_id": "1",
+        "start_date": "2026-11-25",
+        "end_date": "2026-11-26",
+        "reason": "Personal work"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

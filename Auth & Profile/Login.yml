@@ -1,0 +1,81 @@
+info:
+  name: Login
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://neethu.astradevelops.in/school/public/api/login
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      // ==============================================================================
+      // 1. STUDENT LOGIN (Active by default)
+      // ==============================================================================
+      // {
+      //   "role": "1",
+      //   "login": "ADM2024001", // Admission No or Student ID
+      //   "password": "password123", // Password or PIN
+
+      //   // Device Info (Optional)
+      //   "fcm_token": "sample_fcm_token_student",
+      //   "app_version": "1.0.0",
+      //   "model": "SM-G998B",
+      //   "model_name": "Samsung S21",
+      //   "model_version": "Android 13"
+      // }
+
+      // ==============================================================================
+      // 2. TEACHER LOGIN (Uncomment to test)
+      // ==============================================================================
+      {
+        "role": "2",
+        "login": "TCH001", // Teacher Code / Staff ID / Email
+        "password": "password", // Password or PIN
+        "fcm_token": "sample_fcm_token_teacher",
+        "app_version": "1.0.0",
+        "model": "iPhone14,2",
+        "model_name": "iPhone 13 Pro",
+        "model_version": "iOS 17.2"
+      }
+
+      // ==============================================================================
+      // 3. DRIVER LOGIN (Uncomment to test)
+      // ==============================================================================
+      // {
+      //   "role": "4",
+      //   "login": "9876543220", // Registered Mobile Number
+      //   "password": "password", // Password or PIN
+      //   "fcm_token": "sample_fcm_token_driver",
+      //   "app_version": "1.0.0",
+      //   "model": "SM-A525F",
+      //   "model_name": "Samsung Galaxy A52",
+      //   "model_version": "Android 14"
+      // }
+
+      // ==============================================================================
+      // 4. PARENT LOGIN (Uncomment to test)
+      // ==============================================================================
+      // {
+      //   "role": "5",
+      //   "login": "jyothi@gmail.com", // Registered Mobile or Email
+      //   "password": "password", // Password
+      //   "fcm_token": "sample_fcm_token_parent",
+      //   "app_version": "1.0.0",
+      //   "model": "SM-S928B",
+      //   "model_name": "Samsung Galaxy S24 Ultra",
+      //   "model_version": "Android 14"
+      // }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

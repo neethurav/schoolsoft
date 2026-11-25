@@ -1,0 +1,40 @@
+info:
+  name: Attendance Calendar & Monthly Summary
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://neethu.astradevelops.in/school/public/api/attendance/1
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 1|XawfnCScJbb2tQvLl2Zk5VYnpPO4ldKLBMBbFzYbbe92f328
+  body:
+    type: json
+    data: |+
+      // ==========================================
+      // 1. ATTENDANCE
+      // ==========================================
+
+      // 1.1 DEFAULT (Current Month for Logged-in Student or Default Child)
+      // GET {{base_url}}/attendance
+
+      // 1.2 SPECIFIC MONTH & YEAR (When user changes month in app)
+      // GET {{base_url}}/attendance?month=10&year=2026
+
+      // 1.3 PARENT SIBLING SWITCHING (Switching to child e.g. Student ID 2)
+      // GET {{base_url}}/attendance/2
+
+      // 1.4 PARENT SIBLING SWITCHING WITH MONTH FILTER
+      // GET {{base_url}}/attendance/2?month=10&year=2026
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
